@@ -607,7 +607,10 @@ void Copter::one_hz_loop()
         Log_Write_Data(LogDataID::AP_STATE, ap.value);
     }
 
-    if (!motors->armed()) {
+    // arming.update();
+    
+    if (!motors->armed())
+    {
         update_using_interlock();
 
         // check the user hasn't updated the frame class or type
@@ -630,6 +633,8 @@ void Copter::one_hz_loop()
 #endif
 
     AP_Notify::flags.flying = !ap.land_complete;
+
+    gcs().send_text(MAV_SEVERITY_CRITICAL, "Current Altitude:%.1fm",copter.flightmode->get_alt_above_ground_cm()/100.0f);
 }
 
 void Copter::init_simple_bearing()
