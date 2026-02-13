@@ -910,7 +910,7 @@ const AP_Param::GroupInfo ParametersG2::var_info[] = {
 #if AUTOTUNE_ENABLED == ENABLED
     // @Group: AUTOTUNE_
     // @Path: ../libraries/AC_AutoTune/AC_AutoTune_Multi.cpp,../libraries/AC_AutoTune/AC_AutoTune_Heli.cpp
-    AP_SUBGROUPPTR(autotune_ptr, "AUTOTUNE_",  29, ParametersG2, AutoTune),
+    AP_SUBGROUPPTR(autotune_ptr, "AUTOTUNE_", 29, ParametersG2, AutoTune),
 #endif
 
 #if AP_SCRIPTING_ENABLED
@@ -1159,6 +1159,7 @@ const AP_Param::GroupInfo ParametersG2::var_info[] = {
     // @User: Standard
     AP_GROUPINFO("TKOFF_RPM_MIN", 58, ParametersG2, takeoff_rpm_min, 0),
 #endif
+    AP_GROUPINFO("STAR_R_CM", 59, ParametersG2, star_radius_cm, 1000.0f),
 
     // ID 62 is reserved for the SHOW_... parameters from the Skybrush fork at
     // https://github.com/skybrush-io/ardupilot

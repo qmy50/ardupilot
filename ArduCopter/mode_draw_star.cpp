@@ -27,7 +27,7 @@ bool ModeDrawStar::init(bool ignore_checks)
 
 void ModeDrawStar::generate_path()
 {
-    float radius_cm = 1000.0f; // 10米半径
+    float radius_cm = g2.star_radius_cm; // 10米半径
     
     // // 获取当前刹车悬停点作为中心参考点 (EKF Origin frame)
     // if (!wp_nav->get_wp_stopping_point(path[0])) {

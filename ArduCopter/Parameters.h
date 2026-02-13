@@ -673,6 +673,7 @@ public:
 #if HAL_WITH_ESC_TELEM && FRAME_CONFIG != HELI_FRAME
     AP_Int16 takeoff_rpm_min;
 #endif
+    AP_Float                star_radius_cm;
 };
 
 extern const AP_Param::Info        var_info[];
