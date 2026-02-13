@@ -101,6 +101,7 @@ public:
     ///     This function is the default initialisation for any position control that provides position, velocity and acceleration.
     ///     This function is private and contains all the shared xy axis initialisation functions
     void init_xy_controller();
+    void init_xy_controller(Vector3f target_point);
 
     /// input_accel_xy - calculate a jerk limited path from the current position, velocity and acceleration to an input acceleration.
     ///     The function takes the current position, velocity, and acceleration and calculates the required jerk limited adjustment to the acceleration for the next time dt.

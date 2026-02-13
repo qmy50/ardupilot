@@ -226,6 +226,7 @@ public:
     friend class ModeZigZag;
     friend class ModeAutorotate;
     friend class ModeTurtle;
+    friend class ModeDrawStar;
 
     Copter(void);
 
@@ -1013,9 +1014,11 @@ private:
 #if MODE_AUTOROTATE_ENABLED == ENABLED
     ModeAutorotate mode_autorotate;
 #endif
+    ModeDrawStar mode_drawstar;
 #if MODE_TURTLE_ENABLED == ENABLED
     ModeTurtle mode_turtle;
 #endif
+   
 
     // mode.cpp
     Mode *mode_from_mode_num(const Mode::Number mode);

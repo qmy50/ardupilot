@@ -56,7 +56,7 @@ void ModeGuided::run()
         pause_control_run();
         return;
     }
-
+    
     // call the correct auto controller
     switch (guided_mode) {
 
@@ -729,8 +729,8 @@ void ModeGuided::pos_control_run()
     pos_control->input_pos_xyz(guided_pos_target_cm, terr_offset, pos_offset_z_buffer);
 
     // run position controllers
-    pos_control->update_xy_controller();
-    pos_control->update_z_controller();
+    pos_control->update_xy_controller();    //水平（XY轴）位置控制
+    pos_control->update_z_controller();     //垂直（Z轴）高度控制
 
     // call attitude controller
     if (auto_yaw.mode() == AUTO_YAW_HOLD) {

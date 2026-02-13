@@ -518,6 +518,8 @@ void AC_PosControl::init_xy_controller()
     _last_update_xy_us = AP_HAL::micros64();
 }
 
+
+
 /// input_accel_xy - calculate a jerk limited path from the current position, velocity and acceleration to an input acceleration.
 ///     The function takes the current position, velocity, and acceleration and calculates the required jerk limited adjustment to the acceleration for the next time dt.
 ///     The kinematic path is constrained by the maximum acceleration and jerk set using the function set_max_speed_accel_xy.
